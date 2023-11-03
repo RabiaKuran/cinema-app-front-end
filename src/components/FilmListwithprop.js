@@ -1,19 +1,14 @@
 import React from 'react'
 import Card from '@mui/material/Card';
-import { useContext } from "react";
-import FilmContext from '../context/Film';
 
-function FilmList() {
-  const {films,editFilm,update,deleteFilm} = useContext(FilmContext)
-
+function FilmList({films,editFilm,deleteFilm}) {
   return (
     <div>
         <Card>
-        <table class="table" align="left">
+        <table class="table table-dark" align="center">
         <thead>
           <tr>
             <th scope="col">Film Id</th>
-            <th scope="col">Film Id Db</th>
             <th scope="col">Vizyon Tarihi</th>
             <th scope="col">Film Türü</th>
             <th scope="col">Film İsmi</th>
